@@ -23,12 +23,12 @@ export default function Home() {
     setTodo(todo.filter((item, i) => i !== index));
   }
 
-  function editTodo(index) {
+  function editTodo(index:number) {
     setTemp(todo[index].text);
     deleteTodo(index);
   }
 
-  function toggleCompleted(index) {
+  function toggleCompleted(index:number) {
     const updatedTodos = todo.map((item, i) =>
       i === index ? { ...item, completed: !item.completed } : item
     );
